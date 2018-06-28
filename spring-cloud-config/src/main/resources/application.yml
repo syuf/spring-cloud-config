@@ -1,0 +1,19 @@
+server: 
+  port: 3007
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:3000/eureka/
+spring: 
+  application: 
+    name: config-server
+  cloud: 
+    config: 
+      label: master
+      server: 
+        git:
+          uri: git@github.com:syuf/config.git
+          search-paths: config
+          username: 356418670@qq.com
+          password: ah727816
