@@ -17,3 +17,8 @@ spring:
           search-paths: config
           username: 356418670@qq.com
           password: ah727816
+  rabbitmq:
+    host: 172.16.97.114
+    port: 5672
+    username: admin
+    password: admin 
