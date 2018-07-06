@@ -1,0 +1,30 @@
+server: 
+  port: 3001
+  
+eureka:
+  client: 
+    service-url: 
+      defaultZone: http://127.0.0.1:3000/eureka/
+spring: 
+  application: 
+    name: config-server
+  cloud: 
+    config: 
+      label: master
+      server: 
+        git:
+          uri: git@github.com:syuf/config.git
+          search-paths: /**
+          username: 356418670@qq.com
+          password: ah727816
+          force-pull: true
+  rabbitmq:
+    host: 172.16.97.114
+    port: 5672
+    username: admin
+    password: admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
